@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <% if(login) { %>
+        <p>
+          <h3 class="display-3">Welcome 
+            <%= currentUser.username %>
+          </h3>
+        </p>
+        <a href="/profile/<%= currentUser.username %>"><button type="button" class="btn btn-default">Your Profile</button></a> 
+        <% if(currentUser.role == "Admin") { %>
+        <span> | <a href="/users"><button type="button" class="btn btn-default">Users List</button></a></span>
+        <% }  %>
+          <% } else { %>
+            <h1 class="display-3">Welcome</h1>
+            <p class="lead">Please Sign In !</p>
+            <% } %>
+    </div>
+  </div>
+  <% include ./partials/footer %>

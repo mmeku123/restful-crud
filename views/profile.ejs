@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="jumbotron">
+    
+        <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        Welcome <%= user.role %></h1>
+        <p><strong>Username: </strong><%= user.username %></p> 
+        <p><strong>E-mail: </strong><%= user.email %></p>
+        <p><strong>Description: </strong><%= user.description %></p>
+        
+        <p><a class="btn btn-info" href="/profile/<%= user.username %>/edit" role="button">Edit Profile</a>
+        <% if(user.role == "Admin")  { %>
+        <a class="btn btn-warning" href="/users" role="button">Edit Users</a></p>
+        <% } %> 
+    </div>
+    </div>
+<% include ./partials/footer %>

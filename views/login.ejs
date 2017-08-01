@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+ <div class="row">
+        <h1 style="text-align: center">Sign In</h1>
+        <div style="width: 30%; margin: 25px auto;">
+         <% if (message.length > 0) { %>
+                <div class="alert alert-danger"><%= message %></div>
+            <% } %>
+            <form action="/login" method="post">
+                <div class="form-group">
+                <label>Username</label>
+                    <input class="form-control" type="text" name="username" placeholder="Username"
+                    required>
+                </div>
+                 <div class="form-group">
+                 <label>Password</label>
+                    <input class="form-control" type="text" name="password" placeholder="Password"
+                    required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Sign In!</button>
+                </div>
+            </form>
+            <p><a href="/">Go Back</a> | <a href='/register'> Sign up</a>
+            </p>
+        </div>
+    </div>
+<% include ./partials/footer %>

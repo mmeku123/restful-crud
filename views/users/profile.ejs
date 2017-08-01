@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+<div class="container">
+@Admin
+    <div class="jumbotron">
+        <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        <%= user.role %></h1>       
+        <p><strong>Username: </strong><%= user.username %></p> 
+        <p><strong>E-mail: </strong><%= user.email %></p>
+        <p><strong>Description: </strong><%= user.description %></p>
+        <p></p><a href="/users" role="button">Go back</a>
+        <a class="btn btn-info" href="/users/<%= user.username %>/profile/edit" role="button">Edit Profile</a></p>
+    </div>
+    </div>
+<% include ../partials/footer %>
