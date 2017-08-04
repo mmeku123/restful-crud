@@ -1,28 +1,33 @@
 {
-  "name": "crud-web",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.17.2",
-    "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.3",
-    "ejs": "^2.5.7",
-    "express": "^4.15.3",
-    "express-myconnection": "^1.0.4",
-    "express-session": "^1.15.4",
-    "express-validator": "^3.2.1",
-    "method-override": "^2.3.9",
-    "morgan": "^1.8.2",
-    "mysql": "^2.14.0",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0",
-    "path": "^0.12.7"
-  }
+    "name": "restful-crud",
+    "version": "1.0.0",
+    "description": "Basic RESTful API \r By Nodejs, Expressjs, MySQL",
+    "main": "app.js",
+    "scripts": {
+        "start": "start http://localhost:8000 && node ./script/create_database.js && node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "bcrypt-nodejs": "^0.0.3",
+        "body-parser": "^1.15.2",
+        "confirm-dialog": "^0.1.2",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.3",
+        "express": "^4.15.3",
+        "express-myconnection": "^1.0.4",
+        "express-flash": "^0.0.2",
+        "express-session": "^1.15.4",
+        "express-validator": "^2.21.0",
+        "ejs": "^2.5.7",
+        "morgan": "^1.7.0",
+        "mysql": "^2.14.0",
+        "passport": "^0.3.2",
+        "passport-local": "^1.0.0",
+        "path": "^0.12.7",
+        "serve-favicon": "^2.3.2",
+        "method-override": "^2.3.9"
+    },
+    "devDependencies": {},
+    "author": "",
+    "license": "ISC"
 }
