@@ -1,10 +1,17 @@
 {
     "name": "restful-crud",
     "version": "1.0.0",
+    "private": true,
     "description": "Basic RESTful API \r By Nodejs, Expressjs, MySQL",
     "main": "app.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mmeku123/restful-crud.git"
+    },
     "scripts": {
-        "start": "start http://localhost:8000 && node ./script/create_database.js && node app.js",
+        "start": "npm run build && npm run dev && npm run open",
+        "build": "node ./script/create_database.js",
+        "dev": "node app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
