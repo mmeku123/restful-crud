@@ -1,9 +1,13 @@
 var express = require("express");
 var router = express.Router();
 var middleware = require("../middleware");
+var mysql = require('mysql');
 var passport = require("../passport");
 var bcrypt = require('bcrypt-nodejs');
+var dbconfig = require('../script/database');
+var connection = mysql.createConnection(dbconfig.connection);
 
+connection.query('USE ' + dbconfig.database);
 // USER INDEX PAGE
 router.get('/', middleware.isAdmin, function(req, res) {
     req.getConnection(function(err, connection) {
@@ -45,16 +49,15 @@ router.get('/(:username)/profile/edit', middleware.isAdmin, function(req, res) {
 router.post('/(:username)/profile', function(req, res) {
     var newData = {
         password: bcrypt.hashSync(req.body.password, null, null),
-        description: req.body.description,
-        role: req.body.role
+        description: req.body.description
     }
     req.getConnection(function(err, conn) {
         if (err) throw err;
         else {
-            var para = [newData.password, newData.description, newData.role, req.params.username];
+            var para = [newData.password, newData.description, req.params.username];
             conn.query("UPDATE members \
-                    SET password = ?, description = ?, role = ?WHERE username = ?", para);
-            res.redirect('users/users');
+                    SET password = ?, description = ?  WHERE username = ?", para);
+            res.redirect('/');
         }
     })
 });
