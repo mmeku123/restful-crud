@@ -3,9 +3,7 @@ var mysql = require('mysql');
 var express = require('express');
 var bcrypt = require('bcrypt-nodejs');
 var dbconfig = require('../script/database');
-var connection = mysql.createConnection(dbconfig.connection);
 
-connection.query('USE ' + dbconfig.database);
 module.exports = function(app, passport) {
 
     app.get("/", function(req, res) {
@@ -52,7 +50,7 @@ module.exports = function(app, passport) {
             if (err) throw err;
             else {
                 var para = [newData.password, newData.description, req.user.username];
-                dbConnect.conn.query("UPDATE members \
+                conn.query("UPDATE members \
                     SET password = ?, description = ? WHERE username = ?", para);
                 res.redirect('/');
             }
