@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # RESTful_CRUD
 This is my First ever web application.
 
@@ -93,7 +93,6 @@ or see also `"dependencies": {
 ## Testing
 =======
 # Testing
->>>>>>> 52ace27ba5a60d3c68c8937577fe55dfdd8118d2
 
 If the database and server go well, 
 
@@ -105,4 +104,3 @@ There are 2 roles of user type: `Admin` and `User`
 =======
 1.`User` can only visit normal webpages like home, profile.
 2.`Admin` can visit manage the users-list (new edit or delete).
->>>>>>> 52ace27ba5a60d3c68c8937577fe55dfdd8118d2
