@@ -38,7 +38,6 @@ app.use(
 
 Create Database: `node ./script/create_database.js`
 
-=======
 # restful-crud
 Basic RESTful API 
 By Nodejs, Expressjs, MySQL
@@ -56,7 +55,6 @@ To run it on your own computer
 or
 
 3. Create the database schema `node script/create_database.js`
->>>>>>> 52ace27ba5a60d3c68c8937577fe55dfdd8118d2
 4. Launch: `node app.js`
 5. Open in browser at: `http://localhost:8000`
 
@@ -89,16 +87,12 @@ or see also `"dependencies": {
         "serve-favicon": "^2.3.2"
         }` 
 
-<<<<<<< HEAD
 ## Testing
-=======
-# Testing
 
 If the database and server go well, 
 
 There are 2 roles of user type: `Admin` and `User`
 
-<<<<<<< HEAD
 1. `User` can only visit normal webpages like home, profile.
 2. `Admin` can visit manage the users-list (new edit or delete).
 =======
