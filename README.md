@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+# RESTful_CRUD
+This is my First ever web application.
+
+Basic RESTful API 
+By Nodejs, Expressjs, MySQL
+
+## Instruction
+
+To run it on your own computer
+
+1. Clone the repo: `https://github.com/mmeku123/restful-crud.git` or download zip file
+2. Install packages: `npm install `
+3. Change your mysql settings in `./script/database.js`
+```
+module.exports = {
+    'connection': {
+        'host': 'localhost',
+        'user': 'root',
+        'password': '1234'
+    },
+    'database': 'mydb',
+    'users_table': 'members'
+};
+```
+and `./app.js` on `line 49`
+```
+app.use(
+    connection(mysql, {
+        host: 'localhost',
+        user: 'root', // your mysql user
+        password: '1234', // your mysql password
+        port: 3306, //port mysql
+        database: 'mydb' // your database name
+    }, 'single') //or singlem
+);
+```
+
+Create Database: `node ./script/create_database.js`
+
+=======
 # restful-crud
 Basic RESTful API 
 By Nodejs, Expressjs, MySQL
@@ -15,6 +56,7 @@ To run it on your own computer
 or
 
 3. Create the database schema `node script/create_database.js`
+>>>>>>> 52ace27ba5a60d3c68c8937577fe55dfdd8118d2
 4. Launch: `node app.js`
 5. Open in browser at: `http://localhost:8000`
 
@@ -47,11 +89,20 @@ or see also `"dependencies": {
         "serve-favicon": "^2.3.2"
         }` 
 
+<<<<<<< HEAD
+## Testing
+=======
 # Testing
+>>>>>>> 52ace27ba5a60d3c68c8937577fe55dfdd8118d2
 
 If the database and server go well, 
 
 There are 2 roles of user type: `Admin` and `User`
 
+<<<<<<< HEAD
+1. `User` can only visit normal webpages like home, profile.
+2. `Admin` can visit manage the users-list (new edit or delete).
+=======
 1.`User` can only visit normal webpages like home, profile.
 2.`Admin` can visit manage the users-list (new edit or delete).
+>>>>>>> 52ace27ba5a60d3c68c8937577fe55dfdd8118d2
