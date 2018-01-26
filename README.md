@@ -21,16 +21,17 @@ module.exports = {
     },
     'database': 'mydb',
     'users_table': 'members'
-};
+`};
 ```
-and `./app.js` on `line 49`
+dand `./app.js` on `line 49`
 ```
 app.use(
     connection(mysql, {
         host: 'localhost',
         user: 'root', // your mysql user
         password: '1234', // your mysql password
-        port: 3306, //port mysql
+
+port: 3306, //port mysql
         database: 'mydb' // your database name
     }, 'single') //or singlem
 );
@@ -38,24 +39,6 @@ app.use(
 
 Create Database: `node ./script/create_database.js`
 
-# restful-crud
-Basic RESTful API 
-
-By Nodejs, Expressjs, MySQL
-
-# Instruction
-
-To run it on your own computer
-
-1. Clone the repo:` https://github.com/mmeku123/restful-crud.git ` or download zip file
-2. Install packages: ` npm install `
-
-3. Launch at first time: `npm start` 
-(Only for the first time, After that sees below)
-
-or
-
-3. Create the database schema `node script/create_database.js`
 4. Launch: `node app.js`
 5. Open in browser at: `http://localhost:8000`
 
@@ -86,7 +69,7 @@ or see also `"dependencies": {
         "passport-local": "^1.0.0",
         "path": "^0.12.7",
         "serve-favicon": "^2.3.2"
-        }` 
+        }``
 
 ## Testing
 
@@ -96,6 +79,3 @@ There are 2 roles of user type: `Admin` and `User`
 
 1. `User` can only visit normal webpages like home, profile.
 2. `Admin` can visit manage the users-list (new edit or delete).
-=======
-1.`User` can only visit normal webpages like home, profile.
-2.`Admin` can visit manage the users-list (new edit or delete).
